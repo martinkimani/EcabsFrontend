@@ -6,6 +6,7 @@ its a frontend crud for the Ecabs Backend application that implements saving dat
 To be able to add, edit and remove a booking by both rabbitMQ or REST this can be achieved by  
 swapping between 0 and 1 in the url defined in the addBooking, updateBooking, deleteBooking methods in api.services.ts file in services folder in the front end project
 
+the backend project can be found here https://github.com/martinkimani/Ecabs
 
 ## Development server
 
