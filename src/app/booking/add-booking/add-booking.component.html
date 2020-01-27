@@ -1,0 +1,46 @@
+<div class="col-md-6 booking-container">
+    <h2 class="text-center">Add Booking</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="passengerName">Passanger Name:</label>
+        <input type="text" formControlName="passengerName" placeholder="passenger Name" name="passengerName" class="form-control" id="passengerName">
+      </div>
+  
+      <div class="form-group">
+        <label for="passangerContactNumber">passanger Contact Number:</label>
+        <input formControlName="passangerContactNumber" placeholder="passange rContact Number" name="passangerContactNumber" class="form-control" id="passangerContactNumber">
+      </div>
+  
+      <div class="form-group ">
+        <label for="pickupTime">pickup Time</label>
+        <input formControlName="pickupTime" [owlDateTimeTrigger]="dtPicker" [owlDateTime]="dtPicker" class="form-control" id="pickupTime">
+        <owl-date-time #dtPicker></owl-date-time>
+  
+      </div>
+  
+      <div class="form-group">
+        <label for="waitingTime">Waiting Time:</label>
+        <input type="number" formControlName="waitingTime" placeholder="waiting Time" name="waitingTime" class="form-control" id="waitingTime">
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" formControlName="price" placeholder="price" name="price" class="form-control" id="price">
+      </div>
+
+      <div class="form-group">
+        <label for="noOfPassengers">Passangers:</label>
+        <input type="number" formControlName="noOfPassengers" placeholder="Passengers" name="noOfPassengers" class="form-control" id="noOfPassengers">
+      </div>
+
+      <div class="form-group">
+        <label for="asap">ASAP:</label>
+        <select formControlName="asap" class="form-control" id="asap">
+          <option value="false">YES</option>
+          <option value="true">NO</option>
+        </select>
+      </div>
+  
+      <button class="btn btn-success">Add</button>
+    </form>
+  </div>
